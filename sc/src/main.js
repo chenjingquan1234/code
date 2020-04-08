@@ -6,6 +6,10 @@ import './static/css/reset.css'
 import { Swipe, SwipeItem } from 'mint-ui';
 import "mint-ui/lib/style.css"
 
+import bus from './bus'
+bus.install()
+
+
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);

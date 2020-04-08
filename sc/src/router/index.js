@@ -17,9 +17,9 @@ const routes = [
   { path: "/shopmsg", name: "ShopMsg", component: () => import('../views/ShopMsg.vue') },
   { path: "/search", name: "Searchpage", component: () => import('../views/Searchpage.vue') },
   { path: "/order", name: "order", component: () => import('../views/Order.vue') },
-  { path: "/aaa", name: "aaa", component: () => import('../views/Aaa.vue') },
   { path: "/address", name: "address", component: () => import('../views/Address.vue') },
   { path: "/addressmsg", name: "addressmsg", component: () => import('../views/AddressMsg.vue') },
+  { path: "/settlement", name: "settlement", component: () => import('../views/Settlement.vue') },
 ];
 
 const router = new VueRouter({

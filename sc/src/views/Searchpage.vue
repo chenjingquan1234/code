@@ -17,14 +17,14 @@
     </van-search>
     <div class="history">
       <span>最近搜索</span>
-      <i class="iconfont icon-guanbi3" @click="tagList = []"></i>
+      <i class="iconfont icon-guanbi3" @click="$bus.searchList = []"></i>
     </div>
     <div class="tag">
       <van-tag
         style="margin: 3px"
         plain
         round
-        v-for="(item, index) in tagList"
+        v-for="(item, index) in $bus.searchList"
         :key="index"
         @click="search(item)"
       >{{item}}</van-tag>
@@ -43,7 +43,6 @@ export default {
   data() {
     return {
       value: "",
-      tagList: []
     };
   },
 
@@ -55,7 +54,7 @@ export default {
       const searchVal = val
         ? val
         : this.value;
-        (!val && this.value) && this.tagList.push(searchVal);
+        (!val && this.value) && this.$bus.searchList.push(searchVal);
       this.$router.replace({
         path: "/classify",
         query: {

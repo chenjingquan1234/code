@@ -37,7 +37,7 @@
                 src="https://img12.360buyimg.com/n7/jfs/t1/71435/25/6273/176927/5d465a98E59e550f8/3eb450a1f83e2c8b.jpg"
                 alt
               />
-              <div class="title">一汽大众迈腾b8汽车钥匙电池 b7遥控器松下原装电子【持久款2032】 【进口汽</div>
+              <div class="title">一汽大众迈腾b8汽车钥匙电池</div>
             </div>
             <div class="foot">
               <div >
@@ -65,25 +65,25 @@ export default {
       navList: [
         {
           url:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=535990282,1655061248&fm=26&gp=0.jpg",
+            require('../assets/img/全部商品.png'),
           name: "全部商品",
           path: ""
         },
         {
           url:
-            "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3022602690,3061840388&fm=26&gp=0.jpg",
+             require('../assets/img/fenlei.png'),
           name: "商品分类",
           path: ""
         },
         {
           url:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3505280470,4055995392&fm=26&gp=0.jpg",
+             require('../assets/img/在线预约.png'),
           name: "在线预约",
           path: ""
         },
         {
           url:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=535990282,1655061248&fm=26&gp=0.jpg",
+             require('../assets/img/huiyuan.png'),
           name: "会员套餐",
           path: ""
         }
@@ -170,8 +170,9 @@ export default {
     @include flex-c(flex-start);
     width: 25%;
     .nav-img {
-      width: 3.3rem;
-      height: 50px;
+      // width: 3.3rem;
+      // height: 50px;
+      @include wh(2.5rem)
     }
     .nav-text {
       font-size: 0.7rem;
@@ -233,11 +234,12 @@ export default {
             height: 1.5rem;
             font-size: 0.7rem;
             overflow: hidden;
+            margin-top:5px
           }
         }
         .foot {
           @include flex(space-between);
-          margin-top: 4px;
+          margin-top: 9px;
           .new-price{
             color:red;
             font-size: 0.9rem;
